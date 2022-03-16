@@ -12,8 +12,8 @@ So the whole package contains an iOS app using Siwft & SwiftUI (or maybe Flutter
 
 ## Design Document For App
 
-[Design Document For App](/iOS/designForAppIndex.md)
+[Design Document For App](/wikis/iOS/designForAppIndex.md)
 
 ## Design Document For Server
 
-[Design Document For Server](/server/designForServerIndex.md)
+[Design Document For Server](/wikis/server/designForServerIndex.md)

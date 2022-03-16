@@ -11,4 +11,4 @@
 
 # UI Design
 
-![iOSUI](/iOS/assets/iOSUI.png)
+![iOSUI](/wikis/iOS/assets/iOSUI.png)
