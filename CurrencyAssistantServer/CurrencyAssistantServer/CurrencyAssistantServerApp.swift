@@ -25,7 +25,7 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             let manager = PushManager()
-            manager.push(manager.token, content: "123")
+            manager.push(PushManager.defaultToken, content: "123")
         }
     }
 }

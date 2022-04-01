@@ -14,12 +14,12 @@
 		564153A327E6A008006DE73B /* CurrencyAssistantServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564153A227E6A008006DE73B /* CurrencyAssistantServerTests.swift */; };
 		564153AD27E6A008006DE73B /* CurrencyAssistantServerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564153AC27E6A008006DE73B /* CurrencyAssistantServerUITests.swift */; };
 		564153AF27E6A008006DE73B /* CurrencyAssistantServerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564153AE27E6A008006DE73B /* CurrencyAssistantServerUITestsLaunchTests.swift */; };
-		564153C127E6AFDF006DE73B /* SecManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 564153C027E6AFDF006DE73B /* SecManager.m */; };
-		564153C527E6B034006DE73B /* Sec.m in Sources */ = {isa = PBXBuildFile; fileRef = 564153C427E6B034006DE73B /* Sec.m */; };
-		564153CC27E6B3EA006DE73B /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 564153CB27E6B3EA006DE73B /* NetworkManager.m */; };
-		564153CF27E6B46C006DE73B /* PushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 564153CE27E6B46C006DE73B /* PushManager.m */; };
 		564153D527E6CD82006DE73B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564153D427E6CD82006DE73B /* Cocoa.framework */; };
 		564153D727E6CD86006DE73B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564153D627E6CD86006DE73B /* WebKit.framework */; };
+		564B91D727F5327800AB83E3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B91D627F5327800AB83E3 /* NetworkManager.swift */; };
+		564B91D927F5331F00AB83E3 /* SecModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B91D827F5331F00AB83E3 /* SecModel.swift */; };
+		564B91DB27F534B000AB83E3 /* SecManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B91DA27F534B000AB83E3 /* SecManager.swift */; };
+		564B91DD27F62B7A00AB83E3 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B91DC27F62B7A00AB83E3 /* PushManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,18 +52,14 @@
 		564153AC27E6A008006DE73B /* CurrencyAssistantServerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAssistantServerUITests.swift; sourceTree = "<group>"; };
 		564153AE27E6A008006DE73B /* CurrencyAssistantServerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAssistantServerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		564153BE27E6AFDF006DE73B /* CurrencyAssistantServer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CurrencyAssistantServer-Bridging-Header.h"; sourceTree = "<group>"; };
-		564153BF27E6AFDF006DE73B /* SecManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecManager.h; sourceTree = "<group>"; };
-		564153C027E6AFDF006DE73B /* SecManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecManager.m; sourceTree = "<group>"; };
-		564153C327E6B034006DE73B /* Sec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sec.h; sourceTree = "<group>"; };
-		564153C427E6B034006DE73B /* Sec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sec.m; sourceTree = "<group>"; };
-		564153CA27E6B3EA006DE73B /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		564153CB27E6B3EA006DE73B /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
-		564153CD27E6B46C006DE73B /* PushManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushManager.h; sourceTree = "<group>"; };
-		564153CE27E6B46C006DE73B /* PushManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushManager.m; sourceTree = "<group>"; };
-		564153D027E6C9C0006DE73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		564153D027E6C9C0006DE73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		564153D227E6CA03006DE73B /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		564153D427E6CD82006DE73B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		564153D627E6CD86006DE73B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		564B91D627F5327800AB83E3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		564B91D827F5331F00AB83E3 /* SecModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecModel.swift; sourceTree = "<group>"; };
+		564B91DA27F534B000AB83E3 /* SecManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecManager.swift; sourceTree = "<group>"; };
+		564B91DC27F62B7A00AB83E3 /* PushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +113,11 @@
 		5641538F27E6A003006DE73B /* CurrencyAssistantServer */ = {
 			isa = PBXGroup;
 			children = (
-				564153D027E6C9C0006DE73B /* Info.plist */,
+				564B91D227F531A500AB83E3 /* Resources */,
 				564153BB27E6A257006DE73B /* Push */,
+				564B91D127F5319500AB83E3 /* ForVisa */,
 				5641539027E6A003006DE73B /* CurrencyAssistantServerApp.swift */,
 				5641539227E6A003006DE73B /* ContentView.swift */,
-				5641539427E6A007006DE73B /* Assets.xcassets */,
-				5641539927E6A007006DE73B /* CurrencyAssistantServer.entitlements */,
 				5641539627E6A007006DE73B /* Preview Content */,
 			);
 			path = CurrencyAssistantServer;
@@ -158,9 +153,7 @@
 			children = (
 				564153C627E6B0BA006DE73B /* Network */,
 				564153C227E6B009006DE73B /* Sec */,
-				564153BE27E6AFDF006DE73B /* CurrencyAssistantServer-Bridging-Header.h */,
-				564153CD27E6B46C006DE73B /* PushManager.h */,
-				564153CE27E6B46C006DE73B /* PushManager.m */,
+				564B91DC27F62B7A00AB83E3 /* PushManager.swift */,
 			);
 			path = Push;
 			sourceTree = "<group>";
@@ -168,10 +161,8 @@
 		564153C227E6B009006DE73B /* Sec */ = {
 			isa = PBXGroup;
 			children = (
-				564153C327E6B034006DE73B /* Sec.h */,
-				564153C427E6B034006DE73B /* Sec.m */,
-				564153BF27E6AFDF006DE73B /* SecManager.h */,
-				564153C027E6AFDF006DE73B /* SecManager.m */,
+				564B91D827F5331F00AB83E3 /* SecModel.swift */,
+				564B91DA27F534B000AB83E3 /* SecManager.swift */,
 			);
 			path = Sec;
 			sourceTree = "<group>";
@@ -179,8 +170,7 @@
 		564153C627E6B0BA006DE73B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				564153CA27E6B3EA006DE73B /* NetworkManager.h */,
-				564153CB27E6B3EA006DE73B /* NetworkManager.m */,
+				564B91D627F5327800AB83E3 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -193,6 +183,24 @@
 				564153D227E6CA03006DE73B /* Network.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		564B91D127F5319500AB83E3 /* ForVisa */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ForVisa;
+			sourceTree = "<group>";
+		};
+		564B91D227F531A500AB83E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				564153BE27E6AFDF006DE73B /* CurrencyAssistantServer-Bridging-Header.h */,
+				5641539427E6A007006DE73B /* Assets.xcassets */,
+				564153D027E6C9C0006DE73B /* Info.plist */,
+				5641539927E6A007006DE73B /* CurrencyAssistantServer.entitlements */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,12 +334,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				564153CF27E6B46C006DE73B /* PushManager.m in Sources */,
-				564153CC27E6B3EA006DE73B /* NetworkManager.m in Sources */,
-				564153C127E6AFDF006DE73B /* SecManager.m in Sources */,
+				564B91DD27F62B7A00AB83E3 /* PushManager.swift in Sources */,
+				564B91DB27F534B000AB83E3 /* SecManager.swift in Sources */,
+				564B91D727F5327800AB83E3 /* NetworkManager.swift in Sources */,
 				5641539327E6A003006DE73B /* ContentView.swift in Sources */,
+				564B91D927F5331F00AB83E3 /* SecModel.swift in Sources */,
 				5641539127E6A003006DE73B /* CurrencyAssistantServerApp.swift in Sources */,
-				564153C527E6B034006DE73B /* Sec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +496,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = CurrencyAssistantServer/CurrencyAssistantServer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CurrencyAssistantServer/Resources/CurrencyAssistantServer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -498,7 +506,7 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CurrencyAssistantServer/Info.plist;
+				INFOPLIST_FILE = CurrencyAssistantServer/Resources/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,7 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = neilson.personal.CurrencyAssistantServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "CurrencyAssistantServer/Push/CurrencyAssistantServer-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "CurrencyAssistantServer/Resources//CurrencyAssistantServer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -521,7 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = CurrencyAssistantServer/CurrencyAssistantServer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CurrencyAssistantServer/Resources/CurrencyAssistantServer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -531,7 +539,7 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CurrencyAssistantServer/Info.plist;
+				INFOPLIST_FILE = CurrencyAssistantServer/Resources/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -541,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = neilson.personal.CurrencyAssistantServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "CurrencyAssistantServer/Push/CurrencyAssistantServer-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "CurrencyAssistantServer/Resources//CurrencyAssistantServer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

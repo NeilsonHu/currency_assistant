@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 }
             }
         }
+        
+        UIApplication.shared.applicationIconBadgeNumber = 0;
         return true
     }
     
