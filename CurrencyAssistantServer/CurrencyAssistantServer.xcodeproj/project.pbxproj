@@ -20,6 +20,12 @@
 		564B91D927F5331F00AB83E3 /* SecModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B91D827F5331F00AB83E3 /* SecModel.swift */; };
 		564B91DB27F534B000AB83E3 /* SecManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B91DA27F534B000AB83E3 /* SecManager.swift */; };
 		564B91DD27F62B7A00AB83E3 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B91DC27F62B7A00AB83E3 /* PushManager.swift */; };
+		564F3E9327F6AF5200DD527D /* FVRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F3E9227F6AF5200DD527D /* FVRequest.swift */; };
+		5668B36228023BF800187155 /* LogUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668B36128023BF800187155 /* LogUtilities.swift */; };
+		5668B36428025FB600187155 /* FVWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668B36328025FB600187155 /* FVWebView.swift */; };
+		56BC2E5F27F92198008FE143 /* KeepActiveTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BC2E5E27F92198008FE143 /* KeepActiveTask.swift */; };
+		56CF503127FA480A00787197 /* ForVisaTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF503027FA480A00787197 /* ForVisaTask.swift */; };
+		56CF503427FA512000787197 /* ConfigCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF503327FA512000787197 /* ConfigCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,12 @@
 		564B91D827F5331F00AB83E3 /* SecModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecModel.swift; sourceTree = "<group>"; };
 		564B91DA27F534B000AB83E3 /* SecManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecManager.swift; sourceTree = "<group>"; };
 		564B91DC27F62B7A00AB83E3 /* PushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
+		564F3E9227F6AF5200DD527D /* FVRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVRequest.swift; sourceTree = "<group>"; };
+		5668B36128023BF800187155 /* LogUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUtilities.swift; sourceTree = "<group>"; };
+		5668B36328025FB600187155 /* FVWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVWebView.swift; sourceTree = "<group>"; };
+		56BC2E5E27F92198008FE143 /* KeepActiveTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepActiveTask.swift; sourceTree = "<group>"; };
+		56CF503027FA480A00787197 /* ForVisaTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForVisaTask.swift; sourceTree = "<group>"; };
+		56CF503327FA512000787197 /* ConfigCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				564B91D227F531A500AB83E3 /* Resources */,
+				5668B36028023BDD00187155 /* Utilitis */,
+				56CF503227FA511100787197 /* ConfigCenter */,
+				56BC2E5D27F9217E008FE143 /* KeepActive */,
 				564153BB27E6A257006DE73B /* Push */,
 				564B91D127F5319500AB83E3 /* ForVisa */,
 				5641539027E6A003006DE73B /* CurrencyAssistantServerApp.swift */,
@@ -188,6 +203,9 @@
 		564B91D127F5319500AB83E3 /* ForVisa */ = {
 			isa = PBXGroup;
 			children = (
+				564F3E9227F6AF5200DD527D /* FVRequest.swift */,
+				56CF503027FA480A00787197 /* ForVisaTask.swift */,
+				5668B36328025FB600187155 /* FVWebView.swift */,
 			);
 			path = ForVisa;
 			sourceTree = "<group>";
@@ -201,6 +219,30 @@
 				5641539927E6A007006DE73B /* CurrencyAssistantServer.entitlements */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		5668B36028023BDD00187155 /* Utilitis */ = {
+			isa = PBXGroup;
+			children = (
+				5668B36128023BF800187155 /* LogUtilities.swift */,
+			);
+			path = Utilitis;
+			sourceTree = "<group>";
+		};
+		56BC2E5D27F9217E008FE143 /* KeepActive */ = {
+			isa = PBXGroup;
+			children = (
+				56BC2E5E27F92198008FE143 /* KeepActiveTask.swift */,
+			);
+			path = KeepActive;
+			sourceTree = "<group>";
+		};
+		56CF503227FA511100787197 /* ConfigCenter */ = {
+			isa = PBXGroup;
+			children = (
+				56CF503327FA512000787197 /* ConfigCenter.swift */,
+			);
+			path = ConfigCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,10 +376,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56CF503427FA512000787197 /* ConfigCenter.swift in Sources */,
 				564B91DD27F62B7A00AB83E3 /* PushManager.swift in Sources */,
+				5668B36228023BF800187155 /* LogUtilities.swift in Sources */,
+				5668B36428025FB600187155 /* FVWebView.swift in Sources */,
+				56CF503127FA480A00787197 /* ForVisaTask.swift in Sources */,
 				564B91DB27F534B000AB83E3 /* SecManager.swift in Sources */,
 				564B91D727F5327800AB83E3 /* NetworkManager.swift in Sources */,
+				56BC2E5F27F92198008FE143 /* KeepActiveTask.swift in Sources */,
 				5641539327E6A003006DE73B /* ContentView.swift in Sources */,
+				564F3E9327F6AF5200DD527D /* FVRequest.swift in Sources */,
 				564B91D927F5331F00AB83E3 /* SecModel.swift in Sources */,
 				5641539127E6A003006DE73B /* CurrencyAssistantServerApp.swift in Sources */,
 			);

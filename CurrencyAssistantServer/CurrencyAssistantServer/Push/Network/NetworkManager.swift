@@ -61,7 +61,7 @@ class NetworkManager : NSObject {
                 do {
                     result = try JSONSerialization.jsonObject(with: data, options: []) as? Dictionary<String, Any>
                 } catch {
-                    print("reason:\(error.localizedDescription)")
+                    Xlog("reason:\(error.localizedDescription)")
                     exeFailed(error.localizedDescription)
                     return
                 }
@@ -72,7 +72,7 @@ class NetworkManager : NSObject {
                 return
             }
             let reason = result?["reason"] as? String ?? "undefined error"
-            print("reason:\(reason)")
+            Xlog("reason:\(reason)")
             exeFailed(reason)
         })
         task?.resume()

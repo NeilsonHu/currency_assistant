@@ -22,10 +22,23 @@ struct CurrencyAssistantServerApp: App {
 }
 
 class AppDelegate: NSResponder, NSApplicationDelegate {
+    
+    let keepActiveTask = KeepActiveTask()
+    let forVisaTask = ForVisaTask.shared
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            let manager = PushManager()
-            manager.push(PushManager.defaultToken, content: "123")
-        }
+        // 启动后保持不休眠
+        keepActiveTask.onSwitchKeepActive(true)
+        
+        // 开始任务
+        forVisaTask.startTask()
+    }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
+    
+    func applicationDidResignActive(_ notification: Notification) {
+//        NSApp.hide(nil)
     }
 }

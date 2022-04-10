@@ -20,11 +20,11 @@ class PushManager {
     
     public func push(_ token: String, content: String) {
         guard let cs = _currentSec, !token.isEmpty else {
-            print("发送失败！")
+            Xlog("发送失败！")
             return
         }
         _token = token
-        print("发送推送信息")
+        Xlog("发送推送信息")
         let payload = "{\"aps\":{\"alert\":\"\(content)\",\"badge\":1,\"sound\": \"default\"}}"
         NetworkManager.shared.postWithPayload(payload,
                                               token: _token,
@@ -34,9 +34,9 @@ class PushManager {
                                               payloadType: "alert",
                                               sandBox: true,
                                               exeSuccess: { (response) in
-            print("发送成功")
+            Xlog("发送成功")
         }, exeFailed: { errorMsg in
-            print("发送失败，\(errorMsg)")
+            Xlog("发送失败，\(errorMsg)")
         })
     }
 }
@@ -44,18 +44,18 @@ class PushManager {
 extension PushManager {
     private func _connect() {
         guard _currentSec?.certificateRef != nil else {
-            print("读取证书失败！")
+            Xlog("读取证书失败！")
             return;
         }
-        print("连接服务器...")
+        Xlog("连接服务器...")
         // Open keychain
         let result = SecKeychainCopyDefault(&_keychain)
-        print("SecKeychainCopyDefault:\(result)")
+        Xlog("SecKeychainCopyDefault:\(result)")
         _prepareCerData()
     }
     private func _prepareCerData() {
         guard let cert = _currentSec?.certificateRef else {
-            print("读取证书失败！")
+            Xlog("读取证书失败！")
             return
         }
         // Create identity
@@ -64,10 +64,10 @@ extension PushManager {
                                                       cert,
                                                       &identity)
         if result != errSecSuccess {
-            print("SSL端点域名不能被设置 \(result)")
+            Xlog("SSL端点域名不能被设置 \(result)")
         }
         if result == errSecItemNotFound {
-            print("Keychain中不能找到证书 \(result)")
+            Xlog("Keychain中不能找到证书 \(result)")
         }
         NetworkManager.shared.identity = identity
     }
