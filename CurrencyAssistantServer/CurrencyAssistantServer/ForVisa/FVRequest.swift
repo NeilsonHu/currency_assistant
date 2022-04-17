@@ -41,15 +41,12 @@ class FVRequest: NSObject {
         if let url = URL(string: mainURL) {
             let request = URLRequest.init(url: url)
             invisibleWebView.load(request)
-        }
-    }
-    
-    public func refresh(_ completionBlock: (([String: [[String: Any]]])->(Void))?) {
-        _completionBlock = completionBlock
-        resultMap.removeAll()
-        if let url = URL(string: mainURL) {
-            let request = URLRequest.init(url: url)
-            invisibleWebView.load(request)
+            
+            let format = DateFormatter()
+            format.dateStyle = .long
+            format.timeStyle = .long
+            let date = format.string(from: Date())
+            Xlog(date)
         }
     }
 }
@@ -64,6 +61,11 @@ extension FVRequest: WKNavigationDelegate {
         guard currentCity < 96 else {
             // all finished
             if let block = _completionBlock {
+                let format = DateFormatter()
+                format.dateStyle = .long
+                format.timeStyle = .long
+                let date = format.string(from: Date())
+                Xlog("allFinished" + date)
                 block(resultMap)
             }
             return
@@ -81,12 +83,24 @@ extension FVRequest: WKNavigationDelegate {
             return
         }
         Xlog("mockLoginOnFirstLoad")
-        let js = "let d = document;"
-        + "d.getElementById(\"user_email\").value = \"\(name)\";"
-        + "d.getElementById(\"user_password\").value = \"\(password)\";"
-        + "d.getElementById(\"policy_confirmed\").click();"
-        + "document.getElementsByName(\"commit\")[0].click();"
-        invisibleWebView.evaluateJavaScript(js)
+        
+        let js = "document.getElementById(\"user_email\").name"
+        invisibleWebView.evaluateJavaScript(js) {[weak self] result, error in
+            guard let s = self, let r = result as? String, r == "user[email]" else {
+                if let url = URL(string: self?.mainURL ?? "") {
+                    let request = URLRequest.init(url: url)
+                    self?.invisibleWebView.load(request)
+                }
+                return
+            }
+            
+            let js = "let d = document;"
+            + "d.getElementById(\"user_email\").value = \"\(name)\";"
+            + "d.getElementById(\"user_password\").value = \"\(password)\";"
+            + "d.getElementById(\"policy_confirmed\").click();"
+            + "document.getElementsByName(\"commit\")[0].click();"
+            s.invisibleWebView.evaluateJavaScript(js)
+        }
     }
     
     private func _processCityJson(_ completion: @escaping (()->(Void))) {

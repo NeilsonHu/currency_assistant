@@ -21,15 +21,13 @@ class ForVisaTask {
     
     public func startTask() {
         Xlog("startTask")
-        request.startDataRequest() { [weak self] result in
-            self?._processResponse(result)
-        }
+        tryTaskForOnce()
         _tryFixSchedule()
     }
     
     public func tryTaskForOnce() {
         Xlog("tryTaskForOnce")
-        request.refresh() { [weak self] result in
+        request.startDataRequest() { [weak self] result in
             self?._processResponse(result)
         }
     }
@@ -53,7 +51,8 @@ class ForVisaTask {
             format.dateStyle = .none
             format.timeStyle = .short
             let date = format.string(from: Date())
-            if date.contains(":01 ") { // **:01 AM\PM
+            if date.contains(":01 ") || date.contains(":31 ") {
+                self?.tryTaskForOnce()
                 self?._nextTask()
             } else {
                 self?._tryFixSchedule()
@@ -69,7 +68,11 @@ class ForVisaTask {
         var mostRecentDay: String = "2022-12-01"
         var cityName: String = ""
         rsp.forEach { (key: String, value: [[String: Any]]) in
-            guard !value.isEmpty, whiteList.contains(key) else {
+            guard whiteList.contains(key) else {
+                Xlog("\(key) is not in the whitelist")
+                return
+            }
+            guard !value.isEmpty else {
                 Xlog("\(key) is empty")
                 return
             }
@@ -78,7 +81,7 @@ class ForVisaTask {
                     Xlog("\(key) is empty")
                     return
                 }
-                Xlog("\(cityName):\(time)")
+                Xlog("\(key):\(time)")
                 if time <= mostRecentDay {
                     mostRecentDay = time
                     cityName = key
