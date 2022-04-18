@@ -14,7 +14,7 @@ struct CurrencyAssistantApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTab()
         }
     }
 }

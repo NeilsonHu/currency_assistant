@@ -8,8 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5641538327E69E4B006DE73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5641538227E69E4B006DE73B /* AppDelegate.swift */; };
+		567C659E280DFC260008734A /* CurrencyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C659D280DFC260008734A /* CurrencyContentView.swift */; };
+		567C65A0280DFC4D0008734A /* ForVisaContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C659F280DFC4D0008734A /* ForVisaContentView.swift */; };
+		567C65A2280DFFA50008734A /* FVWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65A1280DFFA50008734A /* FVWebView.swift */; };
+		567C65A6280E008A0008734A /* FVRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65A4280E008A0008734A /* FVRequest.swift */; };
+		567C65A9280E00DB0008734A /* ForVisaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65A8280E00DB0008734A /* ForVisaManager.swift */; };
+		567C65AC280E01470008734A /* LogUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65AB280E01470008734A /* LogUtilities.swift */; };
+		567C65B0280E0F200008734A /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 567C65AF280E0F200008734A /* config.plist */; };
+		567C65B6280E10BE0008734A /* ConfigCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65B5280E10BE0008734A /* ConfigCenter.swift */; };
+		567C65B8280E17BB0008734A /* GrowingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65B7280E17BB0008734A /* GrowingButton.swift */; };
 		56C9011427E6670200BFEFBA /* CurrencyAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9011327E6670200BFEFBA /* CurrencyAssistantApp.swift */; };
-		56C9011627E6670200BFEFBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9011527E6670200BFEFBA /* ContentView.swift */; };
+		56C9011627E6670200BFEFBA /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9011527E6670200BFEFBA /* MainTab.swift */; };
 		56C9011827E6670600BFEFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C9011727E6670600BFEFBA /* Assets.xcassets */; };
 		56C9011B27E6670600BFEFBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C9011A27E6670600BFEFBA /* Preview Assets.xcassets */; };
 		56C9012527E6670600BFEFBA /* CurrencyAssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9012427E6670600BFEFBA /* CurrencyAssistantTests.swift */; };
@@ -43,9 +52,18 @@
 		0BF00CC789665FE9C6AEFE21 /* Pods-CurrencyAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyAssistant.release.xcconfig"; path = "Target Support Files/Pods-CurrencyAssistant/Pods-CurrencyAssistant.release.xcconfig"; sourceTree = "<group>"; };
 		23E7AAE0E67310A1665D25A9 /* Pods-CurrencyAssistant-CurrencyAssistantUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyAssistant-CurrencyAssistantUITests.release.xcconfig"; path = "Target Support Files/Pods-CurrencyAssistant-CurrencyAssistantUITests/Pods-CurrencyAssistant-CurrencyAssistantUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5641538227E69E4B006DE73B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		567C659D280DFC260008734A /* CurrencyContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyContentView.swift; sourceTree = "<group>"; };
+		567C659F280DFC4D0008734A /* ForVisaContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForVisaContentView.swift; sourceTree = "<group>"; };
+		567C65A1280DFFA50008734A /* FVWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVWebView.swift; sourceTree = "<group>"; };
+		567C65A4280E008A0008734A /* FVRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FVRequest.swift; path = ../../../CurrencyAssistantServer/CurrencyAssistantServer/ForVisa/FVRequest.swift; sourceTree = "<group>"; };
+		567C65A8280E00DB0008734A /* ForVisaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForVisaManager.swift; sourceTree = "<group>"; };
+		567C65AB280E01470008734A /* LogUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogUtilities.swift; path = ../../../CurrencyAssistantServer/CurrencyAssistantServer/Utilitis/LogUtilities.swift; sourceTree = "<group>"; };
+		567C65AF280E0F200008734A /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = config.plist; path = ../../../../../../Desktop/config.plist; sourceTree = "<group>"; };
+		567C65B5280E10BE0008734A /* ConfigCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigCenter.swift; path = ../../../CurrencyAssistantServer/CurrencyAssistantServer/Utilitis/ConfigCenter.swift; sourceTree = "<group>"; };
+		567C65B7280E17BB0008734A /* GrowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingButton.swift; sourceTree = "<group>"; };
 		56C9011027E6670200BFEFBA /* CurrencyAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C9011327E6670200BFEFBA /* CurrencyAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAssistantApp.swift; sourceTree = "<group>"; };
-		56C9011527E6670200BFEFBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		56C9011527E6670200BFEFBA /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
 		56C9011727E6670600BFEFBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56C9011A27E6670600BFEFBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		56C9012027E6670600BFEFBA /* CurrencyAssistantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyAssistantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +126,56 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		567C659B280DFB460008734A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				567C65AF280E0F200008734A /* config.plist */,
+				56C9013D27E6698400BFEFBA /* CurrencyAssistant.entitlements */,
+				56C9011727E6670600BFEFBA /* Assets.xcassets */,
+				56C9011927E6670600BFEFBA /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		567C659C280DFB5C0008734A /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				567C65B9280E1BCD0008734A /* SubViews */,
+				56C9011327E6670200BFEFBA /* CurrencyAssistantApp.swift */,
+				56C9011527E6670200BFEFBA /* MainTab.swift */,
+				567C659F280DFC4D0008734A /* ForVisaContentView.swift */,
+				567C659D280DFC260008734A /* CurrencyContentView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		567C65A3280E003E0008734A /* ForVisa */ = {
+			isa = PBXGroup;
+			children = (
+				567C65A4280E008A0008734A /* FVRequest.swift */,
+				567C65A8280E00DB0008734A /* ForVisaManager.swift */,
+			);
+			path = ForVisa;
+			sourceTree = "<group>";
+		};
+		567C65AA280E01190008734A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				567C65B5280E10BE0008734A /* ConfigCenter.swift */,
+				567C65AB280E01470008734A /* LogUtilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		567C65B9280E1BCD0008734A /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				567C65A1280DFFA50008734A /* FVWebView.swift */,
+				567C65B7280E17BB0008734A /* GrowingButton.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		56C9010727E6670200BFEFBA = {
 			isa = PBXGroup;
 			children = (
@@ -133,12 +201,11 @@
 		56C9011227E6670200BFEFBA /* CurrencyAssistant */ = {
 			isa = PBXGroup;
 			children = (
-				56C9013D27E6698400BFEFBA /* CurrencyAssistant.entitlements */,
 				5641538227E69E4B006DE73B /* AppDelegate.swift */,
-				56C9011327E6670200BFEFBA /* CurrencyAssistantApp.swift */,
-				56C9011527E6670200BFEFBA /* ContentView.swift */,
-				56C9011727E6670600BFEFBA /* Assets.xcassets */,
-				56C9011927E6670600BFEFBA /* Preview Content */,
+				567C659C280DFB5C0008734A /* SwiftUI */,
+				567C65AA280E01190008734A /* Utilities */,
+				567C65A3280E003E0008734A /* ForVisa */,
+				567C659B280DFB460008734A /* Resources */,
 			);
 			path = CurrencyAssistant;
 			sourceTree = "<group>";
@@ -289,6 +356,7 @@
 			files = (
 				56C9011B27E6670600BFEFBA /* Preview Assets.xcassets in Resources */,
 				56C9011827E6670600BFEFBA /* Assets.xcassets in Resources */,
+				567C65B0280E0F200008734A /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,9 +450,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567C65B6280E10BE0008734A /* ConfigCenter.swift in Sources */,
 				5641538327E69E4B006DE73B /* AppDelegate.swift in Sources */,
-				56C9011627E6670200BFEFBA /* ContentView.swift in Sources */,
+				567C659E280DFC260008734A /* CurrencyContentView.swift in Sources */,
+				56C9011627E6670200BFEFBA /* MainTab.swift in Sources */,
+				567C65A2280DFFA50008734A /* FVWebView.swift in Sources */,
+				567C65A9280E00DB0008734A /* ForVisaManager.swift in Sources */,
+				567C65A0280DFC4D0008734A /* ForVisaContentView.swift in Sources */,
+				567C65AC280E01470008734A /* LogUtilities.swift in Sources */,
 				56C9011427E6670200BFEFBA /* CurrencyAssistantApp.swift in Sources */,
+				567C65A6280E008A0008734A /* FVRequest.swift in Sources */,
+				567C65B8280E17BB0008734A /* GrowingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Currency&VisaHelper";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -525,6 +602,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Currency&VisaHelper";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -541,11 +619,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CurrencyAssistant/CurrencyAssistant.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CurrencyAssistant/Resources/CurrencyAssistant.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CurrencyAssistant/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CurrencyAssistant/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 36X3V6E7U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -575,11 +653,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CurrencyAssistant/CurrencyAssistant.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CurrencyAssistant/Resources/CurrencyAssistant.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CurrencyAssistant/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CurrencyAssistant/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 36X3V6E7U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

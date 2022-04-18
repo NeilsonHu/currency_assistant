@@ -12,27 +12,27 @@ struct ContentView: View, LogUtilitiesPrinter {
 
     @ObservedObject var printer: Printer = Printer()
     
-    let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
-    
     var body: some View {
         VStack(alignment: .leading) {
             let webView = FVWebView()
             Text(webView.wkwebView.url?.absoluteString ?? "blank://")
             webView
             HStack() {
-                Button("<") {
+                Button() {
                     webView.wkwebView.goBack()
+                } label: {
+                    Image(systemName: "chevron.left")
                 }
-                Button(">") {
+                Button() {
                     webView.wkwebView.goForward()
+                } label: {
+                    Image(systemName: "chevron.right")
                 }
                 Button("tryOnce") {
                     ForVisaTask.shared.tryTaskForOnce()
+                }.padding([.leading])
+                Button("testPush") {
+                    PushManager().pushToDefault("testPush")
                 }.padding([.leading])
             }
             ScrollView {

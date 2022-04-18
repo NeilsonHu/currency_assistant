@@ -33,10 +33,6 @@ class CurrencyAssistantServerTests: XCTestCase {
         }
     }
     
-    func testPushMananger() throws {
-        PushManager().pushToDefault("123")
-    }
-    
     func testProcessResponse() throws {
         //public func testProcessResponse(_ rsp: [String: [[String: Any]]]) -> String?
         let task = ForVisaTask()

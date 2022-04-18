@@ -79,7 +79,13 @@ extension ForVisaTask {
     }
     
     private func _nextTask() {
-            // loop every 30mins
+        let time = _getCurrentTime()
+        if time.contains("10:") { // 10:**退出任务
+            Xlog("Stop All mission at" + time)
+            return
+        }
+                
+        // loop every 30mins
         DispatchQueue.main.asyncAfter(deadline: .now() + 1800) { [weak self] in
             self?.tryTaskForOnce()
             self?._nextTask() // loop

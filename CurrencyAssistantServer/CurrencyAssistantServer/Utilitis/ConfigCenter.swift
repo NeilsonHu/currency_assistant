@@ -1,8 +1,8 @@
 //
 //  ConfigCenter.swift
-//  CurrencyAssistantServer
+//  CurrencyAssistant
 //
-//  Created by neilson on 2022-04-03.
+//  Created by neilson on 2022-04-18.
 //
 
 import Foundation
@@ -13,17 +13,19 @@ class ConfigCenter {
     
     public let config: [String: String]
     
-    // lazy load on init
+        // lazy load on init
     init() {
-        let fileUrlStr = "\(FileManager.default.homeDirectoryForCurrentUser)/Desktop/config.plist"
-        let filePath = fileUrlStr.replacingOccurrences(of: "file://", with: "")
-        guard FileManager.default.fileExists(atPath: filePath),
-              let url = URL(string: fileUrlStr) else {
+        guard let fileUrlStr = Bundle.main.url(forResource: "config", withExtension: "plist") else {
+            config = [:]
+            return
+        }
+        let filePath = fileUrlStr.absoluteString.replacingOccurrences(of: "file://", with: "")
+        guard FileManager.default.fileExists(atPath: filePath) else {
             config = [:]
             return
         }
         do {
-            config = try NSDictionary(contentsOf: url, error: ()) as! [String : String]
+            config = try NSDictionary(contentsOf: fileUrlStr, error: ()) as! [String : String]
         } catch {
             config = [:]
         }

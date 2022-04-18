@@ -9,10 +9,33 @@ import UIKit
 import Foundation
 import UserNotifications
 
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-            // regist remote notification
+        // clean the badge
+        UIApplication.shared.applicationIconBadgeNumber = 0;
+
+        // regist remote notification
+        registForPush()
+        
+        return true
+    }
+    
+    // Handle remote notification registration.
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenComponents = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let deviceTokenString = tokenComponents.joined()
+            // Forward the token to your provider, using a custom method.
+        print("Token: \(deviceTokenString)")
+    }
+}
+
+///
+/// private methods
+///
+extension AppDelegate {
+    private func registForPush() {
         let userNotificationCenter = UNUserNotificationCenter.current()
         userNotificationCenter.delegate = self
         userNotificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
@@ -25,23 +48,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 }
             }
         }
-        
-        UIApplication.shared.applicationIconBadgeNumber = 0;
-        return true
     }
-    
-    // Handle remote notification registration.
-    func application(_ application: UIApplication,
-                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let tokenComponents = deviceToken.map { data in String(format: "%02.2hhx", data) }
-        let deviceTokenString = tokenComponents.joined()
+}
+
+///
+/// UNUserNotificationCenterDelegate
+///
+extension AppDelegate: UNUserNotificationCenterDelegate {
         
-            // Forward the token to your provider, using a custom method.
-        print("Token: \(deviceTokenString)")
-            //98cdb0a8650c318ffafe45a4430bd4e1aca58d773ca195f2122637affd4897c5
-        
-    }
-    
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
