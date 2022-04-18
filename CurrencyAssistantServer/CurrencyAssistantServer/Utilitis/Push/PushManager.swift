@@ -7,15 +7,21 @@
 
 import Foundation
 
+///
+/// to send a apple push for certain device
+///
 class PushManager {
     
-    static public let defaultToken: String = "98cdb0a8650c318ffafe45a4430bd4e1aca58d773ca195f2122637affd4897c5"
-    private var _token: String = defaultToken
+    private var _token: String = ConfigCenter.shared.config["defaultToken"] ?? ""
     private var _keychain: SecKeychain?
     private var _currentSec: SecModel? = SecManager().allPushCertificates().first ?? nil
     
     init() {
         _connect()
+    }
+    
+    public func pushToDefault(_ content: String) {
+        push(_token, content: content)
     }
     
     public func push(_ token: String, content: String) {
@@ -41,7 +47,11 @@ class PushManager {
     }
 }
 
+///
+/// private methods
+/// 
 extension PushManager {
+    
     private func _connect() {
         guard _currentSec?.certificateRef != nil else {
             Xlog("读取证书失败！")
@@ -53,6 +63,7 @@ extension PushManager {
         Xlog("SecKeychainCopyDefault:\(result)")
         _prepareCerData()
     }
+    
     private func _prepareCerData() {
         guard let cert = _currentSec?.certificateRef else {
             Xlog("读取证书失败！")

@@ -1,25 +1,13 @@
 //
-//  CurrencyAssistantServerApp.swift
+//  Appdelegate.swift
 //  CurrencyAssistantServer
 //
-//  Created by neilson on 2022-03-19.
+//  Created by neilson on 2022-04-18.
 //
 
+import Foundation
 import SwiftUI
 import AppKit
-import Foundation
-
-@main
-struct CurrencyAssistantServerApp: App {
-    
-    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-}
 
 class AppDelegate: NSResponder, NSApplicationDelegate {
     
@@ -29,7 +17,7 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         // 启动后保持不休眠
         keepActiveTask.onSwitchKeepActive(true)
-        
+
         // 开始任务
         forVisaTask.startTask()
     }

@@ -8,6 +8,9 @@
 import Foundation
 import IOKit.pwr_mgt
 
+///
+/// to keep mac active
+/// 
 class KeepActiveTask {
     
     private var assertionID: IOPMAssertionID = 0
@@ -25,7 +28,7 @@ class KeepActiveTask {
             }
         } else {
             let success = IOPMAssertionRelease(assertionID);
-                // The system will be able to sleep again.
+            // The system will be able to sleep again.
             if success == kIOReturnSuccess {
                 Xlog("Auto Sleep Enabled.")
             } else {

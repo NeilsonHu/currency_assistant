@@ -8,6 +8,9 @@
 import Foundation
 import SwiftUI
 
+///
+/// to read push cert on mac
+/// 
 class SecManager {
 
     public func allPushCertificates() -> [SecModel] {

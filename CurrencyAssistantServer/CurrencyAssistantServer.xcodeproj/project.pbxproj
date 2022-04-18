@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5623C879280DBA5F00A14EE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623C878280DBA5F00A14EE8 /* AppDelegate.swift */; };
 		5641539127E6A003006DE73B /* CurrencyAssistantServerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5641539027E6A003006DE73B /* CurrencyAssistantServerApp.swift */; };
 		5641539327E6A003006DE73B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5641539227E6A003006DE73B /* ContentView.swift */; };
 		5641539527E6A007006DE73B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5641539427E6A007006DE73B /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5623C878280DBA5F00A14EE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5641538D27E6A003006DE73B /* CurrencyAssistantServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyAssistantServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5641539027E6A003006DE73B /* CurrencyAssistantServerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAssistantServerApp.swift; sourceTree = "<group>"; };
 		5641539227E6A003006DE73B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5623C87A280DBA8900A14EE8 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				5641539027E6A003006DE73B /* CurrencyAssistantServerApp.swift */,
+				5641539227E6A003006DE73B /* ContentView.swift */,
+				5668B36328025FB600187155 /* FVWebView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		5641538427E6A003006DE73B = {
 			isa = PBXGroup;
 			children = (
@@ -126,14 +138,11 @@
 			isa = PBXGroup;
 			children = (
 				564B91D227F531A500AB83E3 /* Resources */,
+				5623C878280DBA5F00A14EE8 /* AppDelegate.swift */,
+				5623C87A280DBA8900A14EE8 /* SwiftUI */,
 				5668B36028023BDD00187155 /* Utilitis */,
-				56CF503227FA511100787197 /* ConfigCenter */,
 				56BC2E5D27F9217E008FE143 /* KeepActive */,
-				564153BB27E6A257006DE73B /* Push */,
 				564B91D127F5319500AB83E3 /* ForVisa */,
-				5641539027E6A003006DE73B /* CurrencyAssistantServerApp.swift */,
-				5641539227E6A003006DE73B /* ContentView.swift */,
-				5641539627E6A007006DE73B /* Preview Content */,
 			);
 			path = CurrencyAssistantServer;
 			sourceTree = "<group>";
@@ -205,7 +214,6 @@
 			children = (
 				564F3E9227F6AF5200DD527D /* FVRequest.swift */,
 				56CF503027FA480A00787197 /* ForVisaTask.swift */,
-				5668B36328025FB600187155 /* FVWebView.swift */,
 			);
 			path = ForVisa;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 		564B91D227F531A500AB83E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5641539627E6A007006DE73B /* Preview Content */,
 				564153BE27E6AFDF006DE73B /* CurrencyAssistantServer-Bridging-Header.h */,
 				5641539427E6A007006DE73B /* Assets.xcassets */,
 				564153D027E6C9C0006DE73B /* Info.plist */,
@@ -225,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				5668B36128023BF800187155 /* LogUtilities.swift */,
+				56CF503327FA512000787197 /* ConfigCenter.swift */,
+				564153BB27E6A257006DE73B /* Push */,
 			);
 			path = Utilitis;
 			sourceTree = "<group>";
@@ -235,14 +246,6 @@
 				56BC2E5E27F92198008FE143 /* KeepActiveTask.swift */,
 			);
 			path = KeepActive;
-			sourceTree = "<group>";
-		};
-		56CF503227FA511100787197 /* ConfigCenter */ = {
-			isa = PBXGroup;
-			children = (
-				56CF503327FA512000787197 /* ConfigCenter.swift */,
-			);
-			path = ConfigCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +391,7 @@
 				564F3E9327F6AF5200DD527D /* FVRequest.swift in Sources */,
 				564B91D927F5331F00AB83E3 /* SecModel.swift in Sources */,
 				5641539127E6A003006DE73B /* CurrencyAssistantServerApp.swift in Sources */,
+				5623C879280DBA5F00A14EE8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +553,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CurrencyAssistantServer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CurrencyAssistantServer/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 36X3V6E7U7;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
@@ -582,7 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CurrencyAssistantServer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CurrencyAssistantServer/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 36X3V6E7U7;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;

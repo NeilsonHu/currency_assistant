@@ -34,8 +34,41 @@ class CurrencyAssistantServerTests: XCTestCase {
     }
     
     func testPushMananger() throws {
-        let manager = PushManager()
-        manager.push(PushManager.defaultToken, content: "123")
+        PushManager().pushToDefault("123")
+    }
+    
+    func testProcessResponse() throws {
+        //public func testProcessResponse(_ rsp: [String: [[String: Any]]]) -> String?
+        let task = ForVisaTask()
+        
+        var rsp: [String: [[String: Any]]] = [:]
+        XCTAssertNil(task.testProcessResponse(rsp))
+        
+        rsp = ["a": [["a":true]]]
+        XCTAssertNil(task.testProcessResponse(rsp))
+        
+        rsp = ["a": [["date":"2023-01-01"]]]
+        XCTAssertNil(task.testProcessResponse(rsp))
+        
+        rsp = ["a": [["date":"2023-01-01"],["date":"2023-01-01"]]]
+        XCTAssertNil(task.testProcessResponse(rsp))
+        
+        rsp = ["a": [["date":"2021-01-01"],["date":"2023-01-01"]]]
+        var result: String? = task.testProcessResponse(rsp)
+        XCTAssertNotNil(result)
+        XCTAssertEqual(result, "Find 2021-01-01 of a !")
+        
+        rsp = ["a": [["date":"2023-01-01"],["date":"2023-01-01"]],
+               "b": [["date":"2021-01-01"],["date":"2023-01-01"]]]
+        result = task.testProcessResponse(rsp)
+        XCTAssertNotNil(result)
+        XCTAssertEqual(result, "Find 2021-01-01 of b !")
+        
+        rsp = ["a": [["date":"2020-01-01"],["date":"2023-01-01"]],
+               "b": [["date":"2021-01-01"],["date":"2023-01-01"]]]
+        result = task.testProcessResponse(rsp)
+        XCTAssertNotNil(result)
+        XCTAssertEqual(result, "Find 2020-01-01 of a !")
     }
 
 }

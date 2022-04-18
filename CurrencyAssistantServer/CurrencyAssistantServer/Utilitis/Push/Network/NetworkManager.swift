@@ -7,6 +7,9 @@
 
 import Foundation
 
+///
+/// to connect to APNS server
+///
 class NetworkManager : NSObject {
     
     public static let shared = NetworkManager()
@@ -25,6 +28,7 @@ class NetworkManager : NSObject {
      * /setting_up_a_remote_notification_server
      * /sending_notification_requests_to_apns?language=objc
      */
+    // !!before calling this, you need to setup identity first!!
     public func postWithPayload(_ payload: String,
                                 token: String,
                                 topic: String?,
@@ -34,6 +38,9 @@ class NetworkManager : NSObject {
                                 sandBox: Bool,
                                 exeSuccess: @escaping ([String: Any]?) -> Void,
                                 exeFailed: @escaping (String) -> Void) {
+        guard session != nil else {
+            return
+        }
         let subUrlString = sandBox ? ".sandbox" : ""
         guard let url = URL(string: "https://api\(subUrlString).push.apple.com/3/device/\(token)") else {
             return
@@ -79,6 +86,9 @@ class NetworkManager : NSObject {
     }
 }
 
+///
+/// URLSessionDelegate
+/// 
 extension NetworkManager : URLSessionDelegate {
     func urlSession(_ session: URLSession,
                     didReceive challenge: URLAuthenticationChallenge,

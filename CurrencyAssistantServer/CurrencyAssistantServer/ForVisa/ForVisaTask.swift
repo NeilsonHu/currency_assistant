@@ -8,70 +8,93 @@
 import Foundation
 import WebKit
 
+///
+/// to request visa time on conditions
+///
 class ForVisaTask {
     
     static public let shared = ForVisaTask()
         
     private let request = FVRequest()
     
-    private let whiteList: [String] = [
-        "Ottawa",
-        "Toronto"
-    ]
-    
     public func startTask() {
         Xlog("startTask")
-        tryTaskForOnce()
-        _tryFixSchedule()
+        _processUntil("5:59 AM") { [weak self] in
+            self?.tryTaskForOnce()
+            self?._tryFixSchedule()
+        }
     }
-    
+        
     public func tryTaskForOnce() {
         Xlog("tryTaskForOnce")
-        request.startDataRequest() { [weak self] result in
+        request.startDataRequest(whiteList: ["Ottawa", "Toronto"], { [weak self] result in
             self?._processResponse(result)
-        }
+        })
     }
     
     public func getWebView() -> WKWebView {
-        return request.invisibleWebView
+        return request.embedWebView
     }
     
-    private func _nextTask() {
-        // next loop
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1800) { [weak self] in
-            self?.tryTaskForOnce()
+}
 
-            self?._nextTask()
+///
+/// private methods
+///
+extension ForVisaTask {
+        
+    private func _getCurrentTime() -> String {
+        let format = DateFormatter()
+        format.dateStyle = .none
+        format.timeStyle = .short
+        return format.string(from: Date())
+    }
+    
+    private func _processUntil(_ time: String, _ block: (@escaping ()->Void)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            guard let s = self else {
+                return
+            }
+            if s._getCurrentTime().contains(time) {
+                block()
+            } else {
+                s._processUntil(time, block)
+            }
         }
     }
     
     private func _tryFixSchedule() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
-            let format = DateFormatter()
-            format.dateStyle = .none
-            format.timeStyle = .short
-            let date = format.string(from: Date())
+            guard let s = self else {
+                return
+            }
+            let date = s._getCurrentTime()
             if date.contains(":01 ") || date.contains(":31 ") {
-                self?.tryTaskForOnce()
-                self?._nextTask()
+                s.tryTaskForOnce()
+                s._nextTask()
             } else {
-                self?._tryFixSchedule()
+                s._tryFixSchedule()
             }
         }
     }
     
-    private func _processResponse(_ rsp: [String: [[String: Any]]]) {
+    private func _nextTask() {
+            // loop every 30mins
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1800) { [weak self] in
+            self?.tryTaskForOnce()
+            self?._nextTask() // loop
+        }
+    }
+    
+    @discardableResult
+    private func _processResponse(_ rsp: [String: [[String: Any]]], isTest: Bool = false) -> String? {
         guard !rsp.isEmpty else {
             Xlog("All cities are empty")
-            return
+            return nil
         }
-        var mostRecentDay: String = "2022-12-01"
+        var mostRecentDay: String = "2022-12-30"
         var cityName: String = ""
         rsp.forEach { (key: String, value: [[String: Any]]) in
-            guard whiteList.contains(key) else {
-                Xlog("\(key) is not in the whitelist")
-                return
-            }
             guard !value.isEmpty else {
                 Xlog("\(key) is empty")
                 return
@@ -90,7 +113,22 @@ class ForVisaTask {
         }
         if !cityName.isEmpty {
             let content = "Find \(mostRecentDay) of \(cityName) !"
-            PushManager().push(PushManager.defaultToken, content: content)
+            if !isTest {
+                PushManager().pushToDefault(content)
+            }
+            return content
         }
+        return nil
+    }
+}
+
+///
+/// for unitTest
+///
+extension ForVisaTask {
+    public func testProcessResponse(_ rsp: [String: [[String: Any]]]) -> String? {
+        let result: String? = _processResponse(rsp, isTest:true)
+        print(result ?? "nil")
+        return result
     }
 }

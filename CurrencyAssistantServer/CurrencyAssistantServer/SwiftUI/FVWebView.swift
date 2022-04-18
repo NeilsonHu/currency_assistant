@@ -8,14 +8,17 @@
 import SwiftUI
 import WebKit
 
-
+///
+/// for swiftUI
+/// 
 struct FVWebView: NSViewRepresentable {
 
     typealias NSViewType = WKWebView
     
+    let wkwebView = ForVisaTask.shared.getWebView()
+    
     func makeNSView(context: Context) -> WKWebView {
-        let forVisaTask = ForVisaTask.shared
-        return forVisaTask.getWebView()
+        return wkwebView
     }
     
     func updateNSView(_ nsView: WKWebView, context: Context) {
