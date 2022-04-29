@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5641538327E69E4B006DE73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5641538227E69E4B006DE73B /* AppDelegate.swift */; };
+		565AD296281C31C500108C6D /* ConfigCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565AD294281C31C500108C6D /* ConfigCenter.swift */; };
+		565AD297281C31C500108C6D /* LogUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565AD295281C31C500108C6D /* LogUtilities.swift */; };
+		565AD299281C334700108C6D /* unbelievable.caf in Resources */ = {isa = PBXBuildFile; fileRef = 565AD298281C334700108C6D /* unbelievable.caf */; };
 		567C659E280DFC260008734A /* CurrencyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C659D280DFC260008734A /* CurrencyContentView.swift */; };
 		567C65A0280DFC4D0008734A /* ForVisaContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C659F280DFC4D0008734A /* ForVisaContentView.swift */; };
 		567C65A2280DFFA50008734A /* FVWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65A1280DFFA50008734A /* FVWebView.swift */; };
 		567C65A6280E008A0008734A /* FVRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65A4280E008A0008734A /* FVRequest.swift */; };
 		567C65A9280E00DB0008734A /* ForVisaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65A8280E00DB0008734A /* ForVisaManager.swift */; };
-		567C65AC280E01470008734A /* LogUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65AB280E01470008734A /* LogUtilities.swift */; };
 		567C65B0280E0F200008734A /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 567C65AF280E0F200008734A /* config.plist */; };
-		567C65B6280E10BE0008734A /* ConfigCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65B5280E10BE0008734A /* ConfigCenter.swift */; };
 		567C65B8280E17BB0008734A /* GrowingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C65B7280E17BB0008734A /* GrowingButton.swift */; };
 		56C9011427E6670200BFEFBA /* CurrencyAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9011327E6670200BFEFBA /* CurrencyAssistantApp.swift */; };
 		56C9011627E6670200BFEFBA /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9011527E6670200BFEFBA /* MainTab.swift */; };
@@ -52,14 +53,15 @@
 		0BF00CC789665FE9C6AEFE21 /* Pods-CurrencyAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyAssistant.release.xcconfig"; path = "Target Support Files/Pods-CurrencyAssistant/Pods-CurrencyAssistant.release.xcconfig"; sourceTree = "<group>"; };
 		23E7AAE0E67310A1665D25A9 /* Pods-CurrencyAssistant-CurrencyAssistantUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyAssistant-CurrencyAssistantUITests.release.xcconfig"; path = "Target Support Files/Pods-CurrencyAssistant-CurrencyAssistantUITests/Pods-CurrencyAssistant-CurrencyAssistantUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5641538227E69E4B006DE73B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		565AD294281C31C500108C6D /* ConfigCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigCenter.swift; path = ../../Shared/ConfigCenter.swift; sourceTree = "<group>"; };
+		565AD295281C31C500108C6D /* LogUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogUtilities.swift; path = ../../Shared/LogUtilities.swift; sourceTree = "<group>"; };
+		565AD298281C334700108C6D /* unbelievable.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = unbelievable.caf; sourceTree = "<group>"; };
 		567C659D280DFC260008734A /* CurrencyContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyContentView.swift; sourceTree = "<group>"; };
 		567C659F280DFC4D0008734A /* ForVisaContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForVisaContentView.swift; sourceTree = "<group>"; };
 		567C65A1280DFFA50008734A /* FVWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVWebView.swift; sourceTree = "<group>"; };
 		567C65A4280E008A0008734A /* FVRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FVRequest.swift; path = ../../../CurrencyAssistantServer/CurrencyAssistantServer/ForVisa/FVRequest.swift; sourceTree = "<group>"; };
 		567C65A8280E00DB0008734A /* ForVisaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForVisaManager.swift; sourceTree = "<group>"; };
-		567C65AB280E01470008734A /* LogUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogUtilities.swift; path = ../../../CurrencyAssistantServer/CurrencyAssistantServer/Utilitis/LogUtilities.swift; sourceTree = "<group>"; };
-		567C65AF280E0F200008734A /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = config.plist; path = ../../../../../../Desktop/config.plist; sourceTree = "<group>"; };
-		567C65B5280E10BE0008734A /* ConfigCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigCenter.swift; path = ../../../CurrencyAssistantServer/CurrencyAssistantServer/Utilitis/ConfigCenter.swift; sourceTree = "<group>"; };
+		567C65AF280E0F200008734A /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = config.plist; path = ../../Desktop/config.plist; sourceTree = SOURCE_ROOT; };
 		567C65B7280E17BB0008734A /* GrowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingButton.swift; sourceTree = "<group>"; };
 		56C9011027E6670200BFEFBA /* CurrencyAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C9011327E6670200BFEFBA /* CurrencyAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAssistantApp.swift; sourceTree = "<group>"; };
@@ -126,9 +128,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		565AD293281C31B100108C6D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				565AD294281C31C500108C6D /* ConfigCenter.swift */,
+				565AD295281C31C500108C6D /* LogUtilities.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		567C659B280DFB460008734A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				565AD298281C334700108C6D /* unbelievable.caf */,
 				567C65AF280E0F200008734A /* config.plist */,
 				56C9013D27E6698400BFEFBA /* CurrencyAssistant.entitlements */,
 				56C9011727E6670600BFEFBA /* Assets.xcassets */,
@@ -156,15 +168,6 @@
 				567C65A8280E00DB0008734A /* ForVisaManager.swift */,
 			);
 			path = ForVisa;
-			sourceTree = "<group>";
-		};
-		567C65AA280E01190008734A /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				567C65B5280E10BE0008734A /* ConfigCenter.swift */,
-				567C65AB280E01470008734A /* LogUtilities.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		567C65B9280E1BCD0008734A /* SubViews */ = {
@@ -203,7 +206,7 @@
 			children = (
 				5641538227E69E4B006DE73B /* AppDelegate.swift */,
 				567C659C280DFB5C0008734A /* SwiftUI */,
-				567C65AA280E01190008734A /* Utilities */,
+				565AD293281C31B100108C6D /* Utilities */,
 				567C65A3280E003E0008734A /* ForVisa */,
 				567C659B280DFB460008734A /* Resources */,
 			);
@@ -356,6 +359,7 @@
 			files = (
 				56C9011B27E6670600BFEFBA /* Preview Assets.xcassets in Resources */,
 				56C9011827E6670600BFEFBA /* Assets.xcassets in Resources */,
+				565AD299281C334700108C6D /* unbelievable.caf in Resources */,
 				567C65B0280E0F200008734A /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,14 +454,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				567C65B6280E10BE0008734A /* ConfigCenter.swift in Sources */,
+				565AD296281C31C500108C6D /* ConfigCenter.swift in Sources */,
 				5641538327E69E4B006DE73B /* AppDelegate.swift in Sources */,
+				565AD297281C31C500108C6D /* LogUtilities.swift in Sources */,
 				567C659E280DFC260008734A /* CurrencyContentView.swift in Sources */,
 				56C9011627E6670200BFEFBA /* MainTab.swift in Sources */,
 				567C65A2280DFFA50008734A /* FVWebView.swift in Sources */,
 				567C65A9280E00DB0008734A /* ForVisaManager.swift in Sources */,
 				567C65A0280DFC4D0008734A /* ForVisaContentView.swift in Sources */,
-				567C65AC280E01470008734A /* LogUtilities.swift in Sources */,
 				56C9011427E6670200BFEFBA /* CurrencyAssistantApp.swift in Sources */,
 				567C65A6280E008A0008734A /* FVRequest.swift in Sources */,
 				567C65B8280E17BB0008734A /* GrowingButton.swift in Sources */,

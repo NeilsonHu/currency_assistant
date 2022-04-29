@@ -49,8 +49,19 @@ class CurrencyAssistantServerTests: XCTestCase {
         rsp = ["a": [["date":"2023-01-01"],["date":"2023-01-01"]]]
         XCTAssertNil(task.testProcessResponse(rsp))
         
-        rsp = ["a": [["date":"2021-01-01"],["date":"2023-01-01"]]]
+        rsp = ["a": [["date":"2022-11-01"],["date":"2023-01-01"]]]
+        XCTAssertNil(task.testProcessResponse(rsp))
+        
+        rsp = ["a": [["date":"2022-10-05"],["date":"2023-01-01"]]]
+        XCTAssertNil(task.testProcessResponse(rsp))
+        
+        rsp = ["a": [["date":"2022-10-04"],["date":"2022-11-01"]]]
         var result: String? = task.testProcessResponse(rsp)
+        XCTAssertNotNil(result)
+        XCTAssertEqual(result, "Find 2022-10-04 of a !")
+        
+        rsp = ["a": [["date":"2021-01-01"],["date":"2023-01-01"]]]
+        result = task.testProcessResponse(rsp)
         XCTAssertNotNil(result)
         XCTAssertEqual(result, "Find 2021-01-01 of a !")
         

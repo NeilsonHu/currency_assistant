@@ -98,7 +98,7 @@ extension ForVisaTask {
             Xlog("All cities are empty")
             return nil
         }
-        var mostRecentDay: String = "2022-12-30"
+        var mostRecentDay: String = "2022-10-04"
         var cityName: String = ""
         rsp.forEach { (key: String, value: [[String: Any]]) in
             guard !value.isEmpty else {

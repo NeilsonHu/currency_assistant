@@ -31,7 +31,7 @@ class PushManager {
         }
         _token = token
         Xlog("发送推送信息")
-        let payload = "{\"aps\":{\"alert\":\"\(content)\",\"badge\":1,\"sound\": \"default\"}}"
+        let payload = "{\"aps\":{\"alert\":\"\(content)\",\"badge\":1,\"sound\": \"unbelievable.caf\"}}"
         NetworkManager.shared.postWithPayload(payload,
                                               token: _token,
                                               topic: cs.topicName,
