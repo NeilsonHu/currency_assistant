@@ -8,8 +8,10 @@
 import UIKit
 import Foundation
 import UserNotifications
+import AFNetworking
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // clean the badge
@@ -18,6 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // regist remote notification
         registForPush()
         
+        if let baseURL: URL = URL(string: "http://ip.jsontest.com/") {
+            let manager: AFHTTPSessionManager = AFHTTPSessionManager.init(baseURL: baseURL)
+            
+            manager.get(baseURL.absoluteString,
+                        parameters: nil,
+                        headers: ["accept": "application/json"]) { progess in
+                print(progess)
+            } success: { task, response in
+                print(response)
+            } failure: { task, error in
+                print(error)
+            }
+        }
+
         return true
     }
     

@@ -27,6 +27,7 @@
 		56C9013127E6670600BFEFBA /* CurrencyAssistantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C9013027E6670600BFEFBA /* CurrencyAssistantUITestsLaunchTests.swift */; };
 		56C9014027E6970B00BFEFBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C9013E27E6970B00BFEFBA /* NotificationCenter.framework */; };
 		56C9014127E6970B00BFEFBA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C9013F27E6970B00BFEFBA /* UserNotifications.framework */; };
+		56CCDBB6282EFE430031B879 /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 56CCDBB5282EFE430031B879 /* AFNetworking */; };
 		A2AC38D7AF109FDD08EA05F0 /* libPods-CurrencyAssistant-CurrencyAssistantUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8530CD5E627E2831375766E8 /* libPods-CurrencyAssistant-CurrencyAssistantUITests.a */; };
 		B2B5970741760B1440DEEDFE /* libPods-CurrencyAssistantTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE725BA2282190775A03B7D /* libPods-CurrencyAssistantTests.a */; };
 		DCFFA63536EB6D2D997FBF9B /* libPods-CurrencyAssistant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7960C89212F8309CDB1D1149 /* libPods-CurrencyAssistant.a */; };
@@ -76,6 +77,8 @@
 		56C9013D27E6698400BFEFBA /* CurrencyAssistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CurrencyAssistant.entitlements; sourceTree = "<group>"; };
 		56C9013E27E6970B00BFEFBA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		56C9013F27E6970B00BFEFBA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		56CCDBB0282EFA250031B879 /* CurrencyAssistant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CurrencyAssistant-Bridging-Header.h"; sourceTree = "<group>"; };
+		56CCDBB7282EFF1C0031B879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7960C89212F8309CDB1D1149 /* libPods-CurrencyAssistant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CurrencyAssistant.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8040FFACAD848A645B552F26 /* Pods-CurrencyAssistantTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyAssistantTests.release.xcconfig"; path = "Target Support Files/Pods-CurrencyAssistantTests/Pods-CurrencyAssistantTests.release.xcconfig"; sourceTree = "<group>"; };
 		8530CD5E627E2831375766E8 /* libPods-CurrencyAssistant-CurrencyAssistantUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CurrencyAssistant-CurrencyAssistantUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +96,7 @@
 				56C9014027E6970B00BFEFBA /* NotificationCenter.framework in Frameworks */,
 				56C9014127E6970B00BFEFBA /* UserNotifications.framework in Frameworks */,
 				DCFFA63536EB6D2D997FBF9B /* libPods-CurrencyAssistant.a in Frameworks */,
+				56CCDBB6282EFE430031B879 /* AFNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,11 +208,13 @@
 		56C9011227E6670200BFEFBA /* CurrencyAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				56CCDBB7282EFF1C0031B879 /* Info.plist */,
 				5641538227E69E4B006DE73B /* AppDelegate.swift */,
 				567C659C280DFB5C0008734A /* SwiftUI */,
 				565AD293281C31B100108C6D /* Utilities */,
 				567C65A3280E003E0008734A /* ForVisa */,
 				567C659B280DFB460008734A /* Resources */,
+				56CCDBB0282EFA250031B879 /* CurrencyAssistant-Bridging-Header.h */,
 			);
 			path = CurrencyAssistant;
 			sourceTree = "<group>";
@@ -267,6 +273,9 @@
 			dependencies = (
 			);
 			name = CurrencyAssistant;
+			packageProductDependencies = (
+				56CCDBB5282EFE430031B879 /* AFNetworking */,
+			);
 			productName = CurrencyAssistant;
 			productReference = 56C9011027E6670200BFEFBA /* CurrencyAssistant.app */;
 			productType = "com.apple.product-type.application";
@@ -321,6 +330,7 @@
 				TargetAttributes = {
 					56C9010F27E6670200BFEFBA = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 					56C9011F27E6670600BFEFBA = {
 						CreatedOnToolsVersion = 13.3;
@@ -341,6 +351,9 @@
 				Base,
 			);
 			mainGroup = 56C9010727E6670200BFEFBA;
+			packageReferences = (
+				56CCDBB4282EFE430031B879 /* XCRemoteSwiftPackageReference "AFNetworking" */,
+			);
 			productRefGroup = 56C9011127E6670200BFEFBA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -623,6 +636,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CurrencyAssistant/Resources/CurrencyAssistant.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -631,6 +645,8 @@
 				DEVELOPMENT_TEAM = 36X3V6E7U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CurrencyAssistant/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Currency&VisaHelper";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -646,6 +662,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = CurrencyAssistantDevProfile;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CurrencyAssistant/CurrencyAssistant-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -657,6 +675,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CurrencyAssistant/Resources/CurrencyAssistant.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -665,6 +684,8 @@
 				DEVELOPMENT_TEAM = 36X3V6E7U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CurrencyAssistant/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Currency&VisaHelper";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -680,6 +701,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = CurrencyAssistantDevProfile;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CurrencyAssistant/CurrencyAssistant-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -805,6 +827,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56CCDBB4282EFE430031B879 /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AFNetworking/AFNetworking";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56CCDBB5282EFE430031B879 /* AFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56CCDBB4282EFE430031B879 /* XCRemoteSwiftPackageReference "AFNetworking" */;
+			productName = AFNetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56C9010827E6670200BFEFBA /* Project object */;
 }

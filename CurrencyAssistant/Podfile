@@ -10,6 +10,7 @@ target 'CurrencyAssistant' do
   target 'CurrencyAssistantTests' do
     inherit! :search_paths
  	pod 'LookinServer', :configurations => ['Debug']
+#	pod 'AFNetworking'
   end
 
   target 'CurrencyAssistantUITests' do
